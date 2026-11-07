@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO -->
+    <title>S.S. Services Berhampur | AC, Refrigerator, Washing Machine & TV Repair Specialist</title>
+    <meta name="title" content="S.S. Services Berhampur | AC, Refrigerator, Washing Machine & TV Repair Specialist" />
+    <meta name="description" content="10+ Years of Trusted Doorstep Appliance Repair in Berhampur, Odisha. Expert repair & installation for AC, Refrigerator, Washing Machine & Smart LED TV. Call Silu: 9040423413." />
+    <meta name="keywords" content="ac repair berhampur, fridge repair berhampur, washing machine service berhampur, smart tv repair berhampur, ss services silu panda, appliance repair medical bank colony, appliance mechanic bapuji nagar berhampur" />
+    <meta name="author" content="ganeshsahu" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Geo-Targeting Meta Tags -->
+    <meta name="geo.region" content="IN-OR" />
+    <meta name="geo.placename" content="Berhampur, Ganjam, Odisha" />
+    <meta name="geo.position" content="19.314962;84.786561" />
+    <meta name="ICBM" content="19.314962, 84.786561" />
+    <meta name="zipcode" content="760004" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="S.S. Services Berhampur — AC, Fridge, Washing Machine & TV Repair" />
+    <meta property="og:description" content="Doorstep repair in 60-90 minutes across Berhampur. AC, Refrigerator, Washing Machine & TV specialist with 10+ years experience. 100% Genuine Parts." />
+    <meta property="og:url" content="https://ss-services-berhampur.vercel.app/" />
+    <meta property="og:image" content="/images/heroimage.jpeg" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Favicon & Touch Icon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD LocalBusiness & ApplianceRepair Schema for AEO & SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["LocalBusiness", "ApplianceRepairService"],
+          "@id": "https://ss-services-berhampur.vercel.app/#business",
+          "name": "S.S. Services",
+          "legalName": "S.S. Services - Appliance Repair Solutions",
+          "image": "/images/heroimage.jpeg",
+          "telephone": "+919040423413",
+          "email": "silupanda16@gmail.com",
+          "url": "https://ss-services-berhampur.vercel.app/",
+          "priceRange": "₹₹",
+          "address": [
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Medical Bank Colony 5th Lane",
+              "addressLocality": "Berhampur",
+              "addressRegion": "Odisha",
+              "postalCode": "760004",
+              "addressCountry": "IN"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Bapuji Nagar Junction",
+              "addressLocality": "Berhampur",
+              "addressRegion": "Odisha",
+              "postalCode": "760004",
+              "addressCountry": "IN"
+            }
+          ],
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "19.314962",
+            "longitude": "84.786561"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "08:00",
+              "closes": "21:00"
+            }
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Silu Panda",
+            "jobTitle": "Lead Appliance Technician & Specialist",
+            "telephone": "+919040423413"
+          },
+          "areaServed": [
+            "Berhampur", "Medical Bank Colony", "Bapuji Nagar", "Courtpeta", "Giri Road", "Ganjam", "Odisha"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Home Appliance Repair & Installation Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air Conditioner (AC) Repair & Installation" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Refrigerator & Deep Freezer Repair" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Washing Machine Repair & Service" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smart LED TV Repair & Installation" } }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Prevent FOUC for Theme Toggle (Default to Bright Mode) -->
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 dark:bg-[#070b14] dark:text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
