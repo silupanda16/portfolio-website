@@ -66,8 +66,8 @@ export const siteConfig = {
 
   hero: {
     badge: "⚡ Fast & Reliable Doorstep Repair in Berhampur",
-    title1: "Professional Appliance Repair & Installation at Your Doorstep",
-    highlightText1: "Expert service for air conditioners, fridges, washers, smart TVs, and more. Fast, reliable, and done right in your home.",
+    title: "Professional Appliance Repair & Installation at Your Doorstep",
+    highlightText: "Expert service for air conditioners, fridges, washers, smart TVs, and more. Fast, reliable, and done right in your home.",
     title1: "Air Conditioners, Fridges, Washers & Smart TVs",
     highlightText1: "Repaired & Installed at Your Doorstep",
     subtitle: "Over a decade of hands-on expertise fixing ACs, Refrigerators, Washing Machines & Smart TVs across Berhampur. Original company parts, quick arrival, and transparent diagnosis.",
