@@ -58,7 +58,7 @@ export const siteConfig = {
     mapDirectUrl: "https://maps.google.com/?q=Medical+Bank+Colony+Berhampur+Odisha+760004",
     developerCredit: {
       text: "Designed and developed by",
-      name: "ganeshsahu",
+      name: "GaneshSahu",
       displayName: "Ganesh Sahu",
       url: "https://gamified-portfolio-one.vercel.app/"
     }

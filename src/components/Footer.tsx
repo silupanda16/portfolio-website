@@ -6,9 +6,9 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-100 dark:bg-[#070b14] text-slate-800 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 text-xs sm:text-sm pb-28 sm:pb-12 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
-          
+
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
           <div className="text-xs text-slate-500 dark:text-slate-400">
             &copy; {new Date().getFullYear()} {siteConfig.business.name}. All rights reserved. Berhampur, Odisha.
           </div>
-          
+
           {/* Designer / Developer Credit - Prominently visible in both bright and dark modes */}
           <div className="flex items-center">
             <a
@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
             >
               <span className="text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">Designed and developed by</span>
               <span className="font-bold text-amber-600 dark:text-amber-400 group-hover:text-amber-500 underline underline-offset-2">
-                ganeshsahu
+                GaneshSahu
               </span>
               <ExternalLink className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 group-hover:text-amber-500 group-hover:translate-x-0.5 transition-transform" />
             </a>
