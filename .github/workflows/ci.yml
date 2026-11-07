@@ -38,3 +38,4 @@ jobs:
         run: |
           test -f dist/index.html || (echo "dist/index.html is missing!" && exit 1)
           echo "Build verification successful!"
+
