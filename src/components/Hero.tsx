@@ -93,11 +93,11 @@ export const Hero: React.FC = () => {
                 {/* Main Hero Photo (Technician Official Portrait) */}
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-900 shadow-inner">
                   <img
-                    src="/images/heroimage.jpeg"
+                    src="/images/heroimage.webp"
                     alt="Silu Panda - Senior Appliance Specialist at S.S. Services Berhampur"
                     className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/images/newvisitingcard.jpg';
+                      (e.target as HTMLImageElement).src = '/images/newvisitingcard.webp';
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />

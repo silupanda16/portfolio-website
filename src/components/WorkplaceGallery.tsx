@@ -19,56 +19,56 @@ export const WorkplaceGallery: React.FC = () => {
       id: 'p1',
       title: 'Visiting Card & Official Contact Hub',
       category: 'credentials',
-      src: '/images/newvisitingcard.jpg',
+      src: '/images/newvisitingcard.webp',
       caption: 'Official S.S. Services visiting card with verified primary mobile contact (Silu Panda: 9040423413) and supported brands in Berhampur.'
     },
     {
       id: 'p2',
       title: 'Outdoor Unit and Gas Filling in AC',
       category: 'ac',
-      src: '/images/WhatsApp Image 2026-11-01 at 4.31.43 PM.jpeg',
+      src: '/images/WhatsApp Image 2026-11-01 at 4.31.43 PM.webp',
       caption: 'High-pressure nitrogen leak testing, vacuumization, and precision eco-gas charging (R32 / R410A) on outdoor split AC condenser units for maximum cooling efficiency.'
     },
     {
       id: 'p3',
       title: 'AC Outdoor Condenser & Compressor Overhaul',
       category: 'ac',
-      src: '/images/WhatsApp Image 2026-11-01 at 4.31.45 PM.jpeg',
+      src: '/images/WhatsApp Image 2026-11-01 at 4.31.45 PM.webp',
       caption: 'Outdoor unit troubleshooting, high-pressure leak testing, and eco-friendly refrigerant gas replenishment.'
     },
     {
       id: 'p4',
       title: 'Appliance Electrical Diagnostics on Workbench',
       category: 'workshop',
-      src: '/images/WhatsApp Image 2026-11-01 at 4.31.47 PM.jpeg',
+      src: '/images/WhatsApp Image 2026-11-01 at 4.31.47 PM.webp',
       caption: 'Workshop bench testing of internal electronic components, motor relays, and temperature sensors.'
     },
     {
       id: 'p5',
       title: 'Indoor Unit Service in Railway Control Room',
       category: 'ac',
-      src: '/images/WhatsApp Image 2026-11-01 at 4.31.48 PM.jpeg',
+      src: '/images/WhatsApp Image 2026-11-01 at 4.31.48 PM.webp',
       caption: 'High-precision indoor unit deep cleaning, air blower servicing, and circuit calibration carried out inside the Railway Control Room for critical 24/7 cooling reliability.'
     },
     {
       id: 'p6',
       title: 'Appliance Motor Assembly & Rewiring',
       category: 'workshop',
-      src: '/images/WhatsApp Image 2026-11-01 at 4.31.50 PM.jpeg',
+      src: '/images/WhatsApp Image 2026-11-01 at 4.31.50 PM.webp',
       caption: 'Heavy-duty copper rewinding and capacitor balancing for washing machine and compressor motors.'
     },
     {
       id: 'p7',
       title: 'Air Conditioner Field Servicing in Berhampur',
       category: 'ac',
-      src: '/images/WhatsApp Image 2026-11-01 at 4.31.54 PM.jpeg',
+      src: '/images/WhatsApp Image 2026-11-01 at 4.31.54 PM.webp',
       caption: 'Doorstep AC deep servicing and indoor unit jet cleaning to restore ice-cold airflow.'
     },
     {
       id: 'p8',
       title: 'On-Site Diagnostic Check by Silu Panda',
       category: 'workshop',
-      src: '/images/WhatsApp Image 2026-11-01 at 4.32.30 PM (1).jpeg',
+      src: '/images/WhatsApp Image 2026-11-01 at 4.32.30 PM (1).webp',
       caption: 'Silu verifying circuit conductivity and motor load on-site at a customer residence.'
     }
   ];

@@ -69,7 +69,7 @@ export const siteConfig = {
     title: "Air Conditioners, Fridges, Washers & Smart TVs",
     highlightText: "Repaired & Installed at Your Doorstep",
     subtitle: "Over a decade of hands-on expertise fixing ACs, Refrigerators, Washing Machines & Smart TVs across Berhampur. Original company parts, quick arrival, and transparent diagnosis.",
-    heroImage: "/images/heroimage.jpeg",
+    heroImage: "/images/heroimage.webp",
     primaryCtaText: "Call Silu: 9040423413",
     secondaryCtaText: "Book via WhatsApp",
     statBadges: [
@@ -117,7 +117,7 @@ export const siteConfig = {
         "Inverter PCB Board Repair & Sensor Replacement",
         "Compressor & Fan Motor Troubleshooting"
       ],
-      imageUrl: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80&fm=webp"
     },
     {
       id: "refrigerator-service",
@@ -132,7 +132,7 @@ export const siteConfig = {
         "Door Gasket Replacement & Drainage De-clogging",
         "Single / Double / Multi-Door & Deep Freezer care"
       ],
-      imageUrl: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=800&q=80&fm=webp"
     },
     {
       id: "washing-machine",
@@ -147,7 +147,7 @@ export const siteConfig = {
         "Electronic PCB Motherboard Repair",
         "Excessive Vibration & Noise Elimination"
       ],
-      imageUrl: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=800&q=80&fm=webp"
     },
     {
       id: "tv-repair",
@@ -162,7 +162,7 @@ export const siteConfig = {
         "Heavy-duty Swivel & Tilt Wall Mount Installation",
         "Display Lines / Flickering Screen Assessment"
       ],
-      imageUrl: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80&fm=webp"
     }
   ],
 
