@@ -7,7 +7,13 @@ import {
   MessageSquare, 
   Send, 
   ExternalLink,
-  CheckCircle2
+  CheckCircle2,
+  QrCode,
+  Copy,
+  Check,
+  X,
+  ZoomIn,
+  ShieldCheck
 } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
@@ -17,6 +23,14 @@ export const ContactSection: React.FC = () => {
   const [customerPhone, setCustomerPhone] = useState('');
   const [customerAddress, setCustomerAddress] = useState('');
   const [issueDescription, setIssueDescription] = useState('');
+  const [isQrModalOpen, setIsQrModalOpen] = useState(false);
+  const [copiedUpi, setCopiedUpi] = useState(false);
+
+  const handleCopyUpi = () => {
+    navigator.clipboard.writeText(siteConfig.business.payment.upiId);
+    setCopiedUpi(true);
+    setTimeout(() => setCopiedUpi(false), 2500);
+  };
 
   const appliances = [
     'Air Conditioner (AC)',
@@ -205,8 +219,8 @@ _Sent via S.S. Services Website_`;
 
           </div>
 
-          {/* Right Column: Instant WhatsApp Booking Generator */}
-          <div className="lg:col-span-6">
+          {/* Right Column: Instant WhatsApp Booking Generator & Official UPI QR */}
+          <div className="lg:col-span-6 space-y-6">
             <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
 
@@ -334,9 +348,175 @@ _Sent via S.S. Services Website_`;
               </div>
 
             </div>
+
+            {/* Official UPI Payment QR Card */}
+            <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-sm flex flex-col sm:flex-row items-center gap-5">
+              <button
+                type="button"
+                onClick={() => setIsQrModalOpen(true)}
+                className="group relative w-28 h-34 rounded-2xl overflow-hidden bg-slate-950 border-2 border-amber-500/40 hover:border-amber-500 shadow-md shrink-0 cursor-pointer transition-all hover:scale-105"
+                title="Click to enlarge UPI QR Code"
+              >
+                <img
+                  src={siteConfig.business.payment.qrCodeImage}
+                  alt={`Official S.S. Services UPI QR - ${siteConfig.business.payment.upiId}`}
+                  width={112}
+                  height={136}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center gap-1 transition-opacity">
+                  <ZoomIn className="w-5 h-5 text-amber-400" />
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">Enlarge</span>
+                </div>
+              </button>
+
+              <div className="flex-1 text-center sm:text-left">
+                <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-amber-700 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full mb-1.5">
+                  <QrCode className="w-3 h-3" />
+                  <span>Instant UPI Payment</span>
+                </div>
+                <h4 className="text-base sm:text-lg font-black text-slate-900 dark:text-white">
+                  Scan QR to Pay After Repair
+                </h4>
+                <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
+                  Pay securely via PhonePe, Google Pay, Paytm, or BHIM once your appliance is tested and verified.
+                </p>
+
+                <div className="mt-3 flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                  <div className="px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-mono font-bold text-slate-900 dark:text-white">
+                    UPI ID: {siteConfig.business.payment.upiId}
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={handleCopyUpi}
+                    className="px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
+                  >
+                    {copiedUpi ? (
+                      <>
+                        <Check className="w-3.5 h-3.5" />
+                        <span>Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3.5 h-3.5" />
+                        <span>Copy ID</span>
+                      </>
+                    )}
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setIsQrModalOpen(true)}
+                    className="px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-100 flex items-center gap-1 transition-all cursor-pointer"
+                  >
+                    <ZoomIn className="w-3.5 h-3.5" />
+                    <span>Full QR</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
+
+        {/* Full-Screen UPI QR Lightbox Modal */}
+        {isQrModalOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-in fade-in duration-200"
+            onClick={() => setIsQrModalOpen(false)}
+          >
+            <div
+              className="relative max-w-md w-full bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => setIsQrModalOpen(false)}
+                className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center transition-colors cursor-pointer"
+                aria-label="Close QR modal"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="p-5 pb-3 text-center border-b border-slate-100 dark:border-slate-800">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 mb-2">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  <span>Verified Business Payment</span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
+                  Scan & Pay via Any UPI App
+                </h3>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                  {siteConfig.business.payment.merchantName} • Berhampur
+                </p>
+              </div>
+
+              <div className="p-6 bg-slate-950 flex flex-col items-center justify-center">
+                <div className="p-3 rounded-2xl bg-black border border-slate-800 shadow-inner max-w-[270px] w-full">
+                  <img
+                    src={siteConfig.business.payment.qrCodeImage}
+                    alt={`UPI Payment QR Code - ${siteConfig.business.payment.upiId}`}
+                    width={270}
+                    height={330}
+                    decoding="async"
+                    className="w-full h-auto rounded-lg object-contain"
+                  />
+                </div>
+              </div>
+
+              <div className="p-5 space-y-4">
+                <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 flex items-center justify-between gap-2">
+                  <div>
+                    <div className="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                      Official UPI ID
+                    </div>
+                    <div className="text-sm font-black font-mono text-slate-900 dark:text-white">
+                      {siteConfig.business.payment.upiId}
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleCopyUpi}
+                    className="px-3.5 py-2 rounded-lg text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
+                  >
+                    {copiedUpi ? (
+                      <>
+                        <Check className="w-3.5 h-3.5" />
+                        <span>Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3.5 h-3.5" />
+                        <span>Copy ID</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between gap-3 pt-1">
+                  <span className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
+                    Works with PhonePe, GPay, Paytm & BHIM
+                  </span>
+                  <a
+                    href={`https://wa.me/91${siteConfig.business.whatsappNumber}?text=${encodeURIComponent(
+                      `Hi Silu bhai, I have completed the UPI payment to ${siteConfig.business.payment.upiId} for my appliance service.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-2 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 shadow-sm shrink-0 transition-all"
+                  >
+                    <MessageSquare className="w-3.5 h-3.5" />
+                    <span>Share Receipt</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
       </div>
     </section>

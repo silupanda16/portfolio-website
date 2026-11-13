@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageSquare, ShieldCheck, Clock, MapPin, CheckCircle, Wrench, Star } from 'lucide-react';
+import { Phone, MessageSquare, ShieldCheck, Clock, MapPin, CheckCircle, Star } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
 export const Hero: React.FC = () => {
@@ -120,8 +120,16 @@ export const Hero: React.FC = () => {
                 {/* Sub-Card Info */}
                 <div className="mt-3 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
-                      <Wrench className="w-5 h-5" />
+                    <div className="w-11 h-11 rounded-full overflow-hidden bg-white p-0.5 ring-1 ring-amber-500/40 shadow-sm shrink-0 flex items-center justify-center">
+                      <img
+                        src={siteConfig.business.logo}
+                        alt={siteConfig.business.name}
+                        width={44}
+                        height={44}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-contain rounded-full"
+                      />
                     </div>
                     <div>
                       <p className="text-xs font-bold text-slate-900 dark:text-white">S.S. Services Workshop</p>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Moon, Sun, Menu, X, Shield, Wrench, MessageSquare } from 'lucide-react';
+import { Phone, Moon, Sun, Menu, X, Shield, MessageSquare } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { siteConfig } from '../data/siteConfig';
 
@@ -64,8 +64,16 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <a href="#" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
-                <Wrench className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.5]" />
+              <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-white p-0.5 shadow-md ring-2 ring-amber-500/40 dark:ring-amber-400/50 group-hover:scale-105 transition-transform shrink-0 flex items-center justify-center">
+                <img
+                  src={siteConfig.business.logo}
+                  alt={`${siteConfig.business.name} Official Logo`}
+                  width={56}
+                  height={56}
+                  fetchPriority="high"
+                  decoding="async"
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
               <div>
                 <div className="flex items-center gap-1.5">

@@ -70,6 +70,20 @@ export const WorkplaceGallery: React.FC = () => {
       category: 'workshop',
       src: '/images/WhatsApp Image 2026-11-01 at 4.32.30 PM (1).webp',
       caption: 'Silu verifying circuit conductivity and motor load on-site at a customer residence.'
+    },
+    {
+      id: 'p9',
+      title: 'Fridge Condenser Replacement & Gas Filling (Near Indian Overseas Bank)',
+      category: 'fridge',
+      src: '/images/fridgereepair.webp',
+      caption: 'Silu Panda replacing the rear refrigerator condenser coil and calibrating refrigerant gas charge on-site near Indian Overseas Bank, Berhampur.'
+    },
+    {
+      id: 'p10',
+      title: 'Fridge Condenser & Vacuum Gas Charging Setup (Near Indian Overseas Bank)',
+      category: 'fridge',
+      src: '/images/fridgeinspection.webp',
+      caption: 'Complete refrigerator condenser replacement setup featuring rotary vacuum pump dehydration, copper brazing torch, manifold pressure gauge, and gas refilling near Indian Overseas Bank, Berhampur.'
     }
   ];
 
@@ -131,6 +145,7 @@ export const WorkplaceGallery: React.FC = () => {
                 alt={photo.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
 

@@ -33,6 +33,7 @@ export interface GalleryItem {
 export const siteConfig = {
   business: {
     name: "S.S. Services",
+    logo: "/images/ssservicelogo.webp",
     legalName: "S.S. Services - Appliance Repair Solutions",
     tagline: "Berhampur's Trusted AC, Refrigerator, Washing Machine & TV Experts",
     founder: "Silu Panda",
@@ -56,6 +57,12 @@ export const siteConfig = {
     serviceHours: "Mon – Sun: 8:00 AM – 9:00 PM (Emergency Call Support Available)",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15124.939023223164!2d84.786561!3d19.314962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3d501062b14643%3A0xe5433d7b9e07d3b0!2sBank%20Colony%2C%20Brahmapur%2C%20Odisha%20760004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
     mapDirectUrl: "https://maps.google.com/?q=Medical+Bank+Colony+Berhampur+Odisha+760004",
+    payment: {
+      upiId: "9040423413@ybl",
+      qrCodeImage: "/images/qrcode.webp",
+      merchantName: "Silu Panda (S.S. Services)",
+      appsSupported: ["PhonePe", "Google Pay", "Paytm", "BHIM UPI", "Cash on Delivery"]
+    },
     developerCredit: {
       text: "Designed and developed by",
       name: "GaneshSahu",
@@ -259,7 +266,7 @@ export const siteConfig = {
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept all convenient Indian payment modes including Cash on Delivery (COD), UPI (Google Pay, PhonePe, Paytm, BHIM), and direct bank transfers after you verify that the appliance is working perfectly."
+      answer: "We accept all convenient Indian payment modes including Cash on Delivery (COD), UPI (Google Pay, PhonePe, Paytm, BHIM — Official UPI ID: 9040423413@ybl), and direct bank transfers after you verify that the appliance is working perfectly."
     },
     {
       question: "How do I book an appointment with Silu?",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrench, Phone, Mail, MapPin, ShieldCheck, ExternalLink } from 'lucide-react';
+import { Phone, Mail, MapPin, ShieldCheck, ExternalLink } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
 export const Footer: React.FC = () => {
@@ -12,8 +12,16 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-slate-950 font-black shadow-md shadow-amber-500/20">
-                <Wrench className="w-5 h-5 stroke-[2.5]" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-white p-0.5 shadow-md ring-2 ring-amber-500/40 dark:ring-amber-400/50 shrink-0 flex items-center justify-center">
+                <img
+                  src={siteConfig.business.logo}
+                  alt={`${siteConfig.business.name} Official Logo`}
+                  width={56}
+                  height={56}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
               <div>
                 <span className="text-xl font-black text-slate-900 dark:text-white tracking-tight">
