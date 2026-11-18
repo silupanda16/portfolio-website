@@ -1,8 +1,10 @@
 import React from 'react';
 import { Phone, Mail, MapPin, ShieldCheck, ExternalLink } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
+import { useLogoModal } from '../context/LogoModalContext';
 
 export const Footer: React.FC = () => {
+  const { openLogoModal } = useLogoModal();
   return (
     <footer className="bg-slate-100 dark:bg-[#070b14] text-slate-800 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 text-xs sm:text-sm pb-28 sm:pb-12 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
@@ -12,7 +14,13 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-white p-0.5 shadow-md ring-2 ring-amber-500/40 dark:ring-amber-400/50 shrink-0 flex items-center justify-center">
+              <button
+                type="button"
+                onClick={openLogoModal}
+                aria-label="Enlarge brand logo card"
+                title="Click to view enlarged Brand Logo Card"
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-white p-0.5 shadow-md ring-2 ring-amber-500/40 dark:ring-amber-400/50 hover:ring-amber-500 hover:scale-105 transition-all shrink-0 flex items-center justify-center cursor-pointer"
+              >
                 <img
                   src={siteConfig.business.logo}
                   alt={`${siteConfig.business.name} Official Logo`}
@@ -22,7 +30,7 @@ export const Footer: React.FC = () => {
                   decoding="async"
                   className="w-full h-full object-contain rounded-full"
                 />
-              </div>
+              </button>
               <div>
                 <span className="text-xl font-black text-slate-900 dark:text-white tracking-tight">
                   {siteConfig.business.name}

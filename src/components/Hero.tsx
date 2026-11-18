@@ -1,8 +1,10 @@
 import React from 'react';
 import { Phone, MessageSquare, ShieldCheck, Clock, MapPin, CheckCircle, Star } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
+import { useLogoModal } from '../context/LogoModalContext';
 
 export const Hero: React.FC = () => {
+  const { openLogoModal } = useLogoModal();
   return (
     <section className="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-slate-100/80 via-white to-slate-50 dark:from-[#080e1b] dark:via-[#070b14] dark:to-[#080d1a] border-b border-slate-200/80 dark:border-slate-800/80">
       {/* Subtle Background Glows (No rainbow/violet, strictly industrial blue/amber) */}
@@ -120,7 +122,13 @@ export const Hero: React.FC = () => {
                 {/* Sub-Card Info */}
                 <div className="mt-3 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-full overflow-hidden bg-white p-0.5 ring-1 ring-amber-500/40 shadow-sm shrink-0 flex items-center justify-center">
+                    <button
+                      type="button"
+                      onClick={openLogoModal}
+                      aria-label="Enlarge brand logo card"
+                      title="Click to view enlarged Brand Logo Card"
+                      className="w-11 h-11 rounded-full overflow-hidden bg-white p-0.5 ring-2 ring-amber-500/40 hover:ring-amber-500 hover:scale-105 transition-all shadow-sm shrink-0 flex items-center justify-center cursor-pointer"
+                    >
                       <img
                         src={siteConfig.business.logo}
                         alt={siteConfig.business.name}
@@ -130,7 +138,7 @@ export const Hero: React.FC = () => {
                         decoding="async"
                         className="w-full h-full object-contain rounded-full"
                       />
-                    </div>
+                    </button>
                     <div>
                       <p className="text-xs font-bold text-slate-900 dark:text-white">S.S. Services Workshop</p>
                       <p className="text-[11px] text-slate-500 dark:text-slate-400">All Brand Parts In Stock</p>

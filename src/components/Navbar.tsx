@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Moon, Sun, Menu, X, Shield, MessageSquare } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { useLogoModal } from '../context/LogoModalContext';
 import { siteConfig } from '../data/siteConfig';
 
 export const Navbar: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
+  const { openLogoModal } = useLogoModal();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -63,8 +65,14 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3 group">
-              <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-white p-0.5 shadow-md ring-2 ring-amber-500/40 dark:ring-amber-400/50 group-hover:scale-105 transition-transform shrink-0 flex items-center justify-center">
+            <div className="flex items-center gap-3">
+              <button
+                type="button"
+                onClick={openLogoModal}
+                aria-label="Enlarge brand logo card"
+                title="Click to view enlarged Brand Logo Card"
+                className="w-11 h-11 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-white p-0.5 shadow-md ring-2 ring-amber-500/40 dark:ring-amber-400/50 hover:ring-amber-500 hover:scale-105 transition-all shrink-0 flex items-center justify-center cursor-pointer"
+              >
                 <img
                   src={siteConfig.business.logo}
                   alt={`${siteConfig.business.name} Official Logo`}
@@ -74,10 +82,10 @@ export const Navbar: React.FC = () => {
                   decoding="async"
                   className="w-full h-full object-contain rounded-full"
                 />
-              </div>
-              <div>
+              </button>
+              <a href="#" className="group">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+                  <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">
                     {siteConfig.business.name}
                   </span>
                   <span className="inline-block text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded">
@@ -87,8 +95,8 @@ export const Navbar: React.FC = () => {
                 <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium line-clamp-1">
                   Appliance Repair & Electrical Experts
                 </p>
-              </div>
-            </a>
+              </a>
+            </div>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
