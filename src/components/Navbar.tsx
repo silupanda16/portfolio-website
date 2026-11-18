@@ -85,7 +85,7 @@ export const Navbar: React.FC = () => {
               </button>
               <a href="#" className="group">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">
+                  <span className="text-xl sm:text-2xl font-black font-['Montserrat','Outfit',sans-serif] tracking-tight text-[#034EA2] dark:text-[#4d8eff] group-hover:text-[#002f6c] dark:group-hover:text-[#70a4ff] transition-colors">
                     {siteConfig.business.name}
                   </span>
                   <span className="inline-block text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded">
@@ -93,7 +93,7 @@ export const Navbar: React.FC = () => {
                   </span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium line-clamp-1">
-                  Appliance Repair & Electrical Experts
+                  Appliance Installation & Repair Experts
                 </p>
               </a>
             </div>

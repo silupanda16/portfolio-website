@@ -518,7 +518,7 @@ ${btoa(encodeURIComponent(JSON.stringify(sorted)))}
 
               <div>
                 <div className="flex items-center gap-2">
-                  <h1 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                  <h1 className="text-lg sm:text-xl font-black font-['Montserrat','Outfit',sans-serif] text-[#034EA2] dark:text-[#4d8eff] tracking-tight">
                     {siteConfig.business.name}
                   </h1>
                   <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-amber-500 text-slate-950">

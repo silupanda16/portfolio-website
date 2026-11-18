@@ -1,6 +1,6 @@
-# S.S. Services — Appliance Repair & Installation Portfolio Website
+# S.S. Services — Appliance Installation & Repair Portfolio Website
 
-Official web application for **S.S. Services** (Lead Specialist: **Silu Panda**), Berhampur's trusted doorstep repair and installation service for Air Conditioners, Refrigerators, Washing Machines, and Smart LED/LCD TVs.
+Official web application for **S.S. Services** (Lead Specialist: **Silu Panda**), Berhampur's trusted doorstep installation and repair service for Air Conditioners, Refrigerators, Washing Machines, and Smart LED/LCD TVs.
 
 ## Key Features
 

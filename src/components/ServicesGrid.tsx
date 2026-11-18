@@ -46,7 +46,7 @@ export const ServicesGrid: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/30 mb-3">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Specialized Appliance Repair & Installation</span>
+            <span>Specialized Appliance Installation & Repair</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
             Doorstep Repair Services in Berhampur

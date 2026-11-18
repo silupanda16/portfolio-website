@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
                 />
               </button>
               <div>
-                <span className="text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                <span className="text-xl font-black font-['Montserrat','Outfit',sans-serif] text-[#034EA2] dark:text-[#4d8eff] tracking-tight">
                   {siteConfig.business.name}
                 </span>
                 <p className="text-[11px] text-amber-700 dark:text-amber-400 font-bold uppercase tracking-wider">
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
               Specialized Services
             </h4>
             <ul className="space-y-2 text-xs text-slate-600 dark:text-slate-400">
-              <li className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Air Conditioner (AC) Repair & Installation</li>
+              <li className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Air Conditioner (AC) Installation & Repair</li>
               <li className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Refrigerator & Deep Freezer Service</li>
               <li className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Washing Machine Repair (Top & Front Load)</li>
               <li className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Smart LED / LCD TV Wall Mounting & Repair</li>

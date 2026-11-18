@@ -53,7 +53,7 @@ export const BrandLogoModal: React.FC<BrandLogoModalProps> = ({ isOpen, onClose 
             </div>
           </div>
 
-          <h3 id="brand-modal-title" className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight mt-5">
+          <h3 id="brand-modal-title" className="text-2xl sm:text-3xl font-black font-['Montserrat','Outfit',sans-serif] text-[#034EA2] dark:text-[#4d8eff] tracking-tight mt-5">
             {siteConfig.business.name}
           </h3>
           <p className="text-xs sm:text-sm font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wider mt-1">

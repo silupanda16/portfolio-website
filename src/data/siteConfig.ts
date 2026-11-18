@@ -46,7 +46,7 @@ export const siteConfig = {
     primaryPhone: "9040423413",
     primaryPhoneDisplay: "+91 90404 23413",
     whatsappNumber: "9040423413",
-    whatsappDefaultMessage: "Hello Silu bhai, I need appliance repair/installation service in Berhampur. Please check availability.",
+    whatsappDefaultMessage: "Hello Silu bhai, I need appliance installation & repair service in Berhampur. Please check availability.",
     primaryAddress: "Medical Bank Colony 5th Lane, Berhampur, Ganjam, Odisha - 760004",
     secondaryAddress: "Bapuji Nagar Junction, Berhampur, Ganjam, Odisha - 760004",
     city: "Berhampur",
@@ -73,7 +73,7 @@ export const siteConfig = {
 
   hero: {
     badge: "⚡ Fast & Reliable Doorstep Repair in Berhampur",
-    title: "Professional Appliance Repair & Installation at Your Doorstep",
+    title: "Professional Appliance Installation & Repair at Your Doorstep",
     highlightText: "Expert service for air conditioners, fridges, washers, smart TVs, and more. Fast, reliable, and done right in your home.",
     title1: "Air Conditioners, Fridges, Washers & Smart TVs",
     highlightText1: "Repaired & Installed at Your Doorstep",
